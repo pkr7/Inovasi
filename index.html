@@ -54,8 +54,8 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<div class="profile-thumb" style="background: url(images/Cetak_4R_Pemotretan_4r_DSCF9597.jpg);"></div>
-							<h1><span>Ponirah Kartika Rahayu S.H., M.Kn.</span></h1>
-							<h3><span>Calon Anggota Legislatif Kota Bandung</span></h3>
+							<h1><span>Profile Singkat - Inovasi</span></h1>
+							<h2><span>PONIRAH KARTIKA RAHAYU S.H., M.Kn.</span></h2>
 							<p>
 								<ul class="fh5co-social-icons">
 									<!-- <li><a href="#"><i class="icon-twitter2"></i></a></li> -->
@@ -512,15 +512,14 @@
 					<div class="fh5co-blog animate-box">
 						<a href="#" class="blog-bg" style="background-image: url(images/photo\ mamah\ sama\ bapung.png);"></a>
 						<div class="blog-text">
-							<span class="posted_on">2024 - 2029	</span>
-							<h3><a href="#">Kolaburasi dan Inovasi dalam berbagai aspek kehidupan</a></h3>
-							<p>kita harus mengkombinasikan sumber daya alam dan sumber.. </p>
+							<span class="posted_on">2024 - 2029</span>
+							<h3><a href="#">Kolaborasi dan Inovasi dalam berbagai aspek kehidupan</a></h3>
+							<p style="margin-bottom: 2px;">kita harus mengkombinasikan sumber daya alam dan sumber</p>
+							<p id="baca" style="display: none;">daya manusia agar kedepannya lebih maju dan bersatu dengan alam<a id="closeLink" style="padding-left: 5px;"> Tutup <i class="icon-arrow-left22" style="position: relative; z-index: -99;"></i></a></p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>777</li>
-								<li><i class="icon-eye2"></i>7777</li>
-								<li><a href="#">Baca lebih <i class="icon-arrow-right22"></i></a></li>
+								<li style="list-style: none;"><a href="#blog-text" id="toggleLink">Baca lebih<i class="icon-arrow-right22"></i></a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -529,13 +528,13 @@
 						<div class="blog-text">
 							<span class="posted_on">2024 - 2029</span>
 							<h3><a href="#">Teknologi tepat guna</a></h3>
-							<p>akan menyatukan potensi sumber daya alam dengan teknologi yang ramah lingkungan</p>
+							<p style=" margin-bottom: 0">akan menyatukan potensi sumber daya alam dengan teknologi yang ramah lingkungan</p>
+							<p id="baca2" style="display: none;">yang dimana kita memanfaatkan kebutuhan alam<a id="closeLink2" style="padding-left: 5px;"> Tutup <i class="icon-arrow-left22" style="position: relative; z-index: -99;"></i></a></p>
+								</ul>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>777</li>
-								<li><i class="icon-eye2"></i>7777</li>
-								<li><a href="#">Baca lebih <i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
+							<li><a href="#blog-text" id="toggleLink2">Baca lebih <i class="icon-arrow-right22"></i></a></li>
+							
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -631,7 +630,7 @@
 			</div>
 		</div>
 	</div>
-
+<!-- 
 	<div id="fh5co-consult">
 		<div class="video fh5co-video" style="background-image: url(images/Cetak_4R_Pemotretan_4r_DSCF9597.jpg);">
 			<div class="overlay"></div>
@@ -673,9 +672,9 @@
 
 			</form>	
 		</div>
-	</div>
+	</div> -->
 
-	<div id="map" class="fh5co-map"></div>
+	<!-- <div id="map" class="fh5co-map"></div> -->
 	</div>
 	
 	<div id="fh5co-footer">
@@ -710,7 +709,53 @@
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- toggle link -->
+	
+	<script>
+		// Bagian pertama
+		var toggleLink = document.getElementById('toggleLink');
+		var closeLink = document.getElementById('closeLink');
+		var baca = document.getElementById('baca');
+	
+		closeLink.style.display = 'none';
+	
+		toggleLink.addEventListener('click', function() {
+			if (baca.style.display === 'none' || baca.style.display === '') {
+				baca.style.display = 'block';
+				closeLink.style.display = 'inline';
+			} else {
+				baca.style.display = 'none';
+				closeLink.style.display = 'none';
+			}
+		});
+	
+		closeLink.addEventListener('click', function() {
+			baca.style.display = 'none';
+			closeLink.style.display = 'none';
+		});
+	
+		var toggleLink2 = document.getElementById('toggleLink2');
+	var closeLink2 = document.getElementById('closeLink2');
+	var baca2 = document.getElementById('baca2');
 
-	</body>
+	closeLink2.style.display = 'none';
+
+	toggleLink2.addEventListener('click', function() {
+		if (baca2.style.display === 'none' || baca2.style.display === '') {
+			baca2.style.display = 'block';
+			closeLink2.style.display = 'inline';
+		} else {
+			baca2.style.display = 'none';
+			closeLink2.style.display = 'none';
+		}
+	});
+
+	closeLink2.addEventListener('click', function() {
+		baca2.style.display = 'none';
+		closeLink2.style.display = 'inline';
+	});
+</script>
+
+
+</body>
 </html>
-
